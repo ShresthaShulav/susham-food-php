@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
 }
-
+/* 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-}
+} */
 
 h1,
 h2,
@@ -884,7 +884,7 @@ Mobile style's
 .home-blog .text p.button a:hover {
   background: #333;
 }
-
+/* 
 .footer-main {
   width: 100%;
   height: auto;
@@ -998,7 +998,7 @@ Mobile style's
   font-size: 13px;
   color: #a3a3a3;
   text-align: center;
-}
+} */
 
 .scrollup {
   position: fixed;
