@@ -256,85 +256,46 @@ foreach ($result as $row) {
 <body>
 
 	<?php echo $after_body; ?>
-	<!--
-<div id="preloader">
-	<div id="status"></div>
-</div>-->
-
-	<!-- top bar -->
-	<div class="top">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="left">
-						<ul>
-							<li><i class="fa fa-phone"></i>
-								<?php echo $contact_phone; ?>
-							</li>
-							<li><i class="fa fa-envelope-o"></i>
-								<?php echo $contact_email; ?>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="right">
-						<ul>
-							<?php
-							$statement = $pdo->prepare("SELECT * FROM tbl_social");
-							$statement->execute();
-							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-							foreach ($result as $row) {
-								?>
-								<?php if ($row['social_url'] != ''): ?>
-									<li><a href="<?php echo $row['social_url']; ?>"><i
-												class="<?php echo $row['social_icon']; ?>"></i></a></li>
-								<?php endif; ?>
-								<?php
-							}
-							?>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="header">
+	<div class="header" style="color: white">
 		<div class="container">
 			<div class="row inner">
 				<div class="col-md-4 logo">
 					<a href="index.php"><img src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
 				</div>
-
 				<div class="col-md-5 right tw-text-white">
 					<ul>
-
 						<?php
 						if (isset($_SESSION['customer'])) {
 							?>
-							<li><i class="fa fa-user"></i>
-								<?php echo LANG_VALUE_13; ?>
-								<?php echo $_SESSION['customer']['cust_name']; ?>
+							<li><i class="fa fa-user tw-text-white"></i>
+								<span class="tw-text-red-50">
+									<?php echo LANG_VALUE_13; ?>
+									<?php echo $_SESSION['customer']['cust_name']; ?>
+								</span>
 							</li>
-							<li><a href="dashboard.php"><i class="fa fa-home"></i>
-									<?php echo LANG_VALUE_89; ?>
+							<li><a href="dashboard.php"><i class="fa fa-home tw-text-white"></i>
+									<span class="tw-text-red-50">
+										<?php echo LANG_VALUE_89; ?>
+									</span>
 								</a></li>
 							<?php
 						} else {
 							?>
-							<li><a href="login.php"><i class="fa fa-sign-in"></i>
-									<?php echo LANG_VALUE_9; ?>
+							<li><a href="login.php"><i class="fa fa-sign-in tw-text-white"></i>
+									<span class="tw-text-red-50">
+										<?php echo LANG_VALUE_9; ?>
+									</span>
 								</a></li>
-							<li><a href="registration.php"><i class="fa fa-user-plus"></i>
-									<?php echo LANG_VALUE_15; ?>
+							<li><a href="registration.php"><i class="fa fa-user-plus tw-text-white"></i>
+									<span class="tw-text-red-50">
+										<?php echo LANG_VALUE_15; ?>
+									</span>
 								</a></li>
 							<?php
 						}
 						?>
 
-						<li><a href="cart.php"><i class="fa fa-shopping-cart"></i>
+						<li><a href="cart.php"><i class="fa fa-shopping-cart tw-text-white"></i>
 								<?php echo LANG_VALUE_18; ?> (
 								<?php echo LANG_VALUE_1; ?>
 								<?php
@@ -450,9 +411,9 @@ foreach ($result as $row) {
 								<li><a href="about.php">
 										<?php echo $about_title; ?>
 									</a></li>
-								<li><a href="faq.php">
+								<!-- <li><a href="faq.php">
 										<?php echo $faq_title; ?>
-									</a></li>
+									</a></li> -->
 
 								<li><a href="contact.php">
 										<?php echo $contact_title; ?>

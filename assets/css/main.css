@@ -9,6 +9,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 } */
+body {
+  @apply leading-[normal] m-0;
+}
 
 h1,
 h2,
@@ -1201,8 +1204,8 @@ ul.nav-tabs {
 .page {
   width: 100%;
   height: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px; */
+  /* padding-bottom: 50px; */
 }
 
 .page h3.special {
