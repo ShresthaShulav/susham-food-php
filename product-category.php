@@ -121,23 +121,13 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
 }
 ?>
 
-<div class="page-banner" style="background-image: url(assets/uploads/<?php echo $banner_product_category; ?>)">
-    <div class="inner">
-        <h1><?php echo LANG_VALUE_50; ?> <?php echo $title; ?></h1>
-    </div>
-</div>
+
 
 <div class="page">
     <div class="container">
         <div class="row">
-          <div class="col-md-3">
-                <?php require_once('sidebar-category.php'); ?>
-            </div>
-            <div class="col-md-9">
-                
-                <h3><?php echo LANG_VALUE_51; ?> "<?php echo $title; ?>"</h3>
+           
                 <div class="product product-cat">
-
                     <div class="row">
                         <?php
                         // Checking if any product is available or not
@@ -269,8 +259,6 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                     </div>
 
                 </div>
-
-            </div>
         </div>
     </div>
 </div>
