@@ -57,11 +57,9 @@ if(isset($_POST['form1'])) {
 <div class="page">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <!-- <div class="col-md-12"> -->
                 <div class="user-content">
-
-                    
-                    <form action="" method="post">
+                    <form action="" method="post" >
                         <?php $csrf->echoInputField(); ?>                  
                         <div class="row">
                             <div class="col-md-4"></div>
@@ -91,7 +89,7 @@ if(isset($_POST['form1'])) {
                         </div>                        
                     </form>
                 </div>                
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 </div>
