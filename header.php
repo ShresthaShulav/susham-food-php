@@ -323,7 +323,7 @@ foreach ($result as $row) {
 							</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3 search-area">
+				<!-- <div class="col-md-3 search-area">
 					<form class="navbar-form navbar-left" role="search" action="search-result.php" method="get">
 						<?php $csrf->echoInputField(); ?>
 						<div class="form-group">
@@ -335,7 +335,7 @@ foreach ($result as $row) {
 							<?php echo LANG_VALUE_3; ?>
 						</button>
 					</form>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -346,9 +346,9 @@ foreach ($result as $row) {
 				<div class="col-md-12 pl_0 pr_0">
 					<div class="menu-container">
 						<div class="menu">
-							<ul>
+							<ul class="tw-display-flex">
 								<li><a href="index.php">Home</a></li>
-
+								
 								<?php
 								$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE show_on_menu=1");
 								$statement->execute();
@@ -358,66 +358,16 @@ foreach ($result as $row) {
 									<li><a href="product-category.php?id=<?php echo $row['tcat_id']; ?>&type=top-category">
 											<?php echo $row['tcat_name']; ?>
 										</a>
-										<ul>
-											<?php
-											$statement1 = $pdo->prepare("SELECT * FROM tbl_mid_category WHERE tcat_id=?");
-											$statement1->execute(array($row['tcat_id']));
-											$result1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
-											foreach ($result1 as $row1) {
-												?>
-												<li><a
-														href="product-category.php?id=<?php echo $row1['mcat_id']; ?>&type=mid-category">
-														<?php echo $row1['mcat_name']; ?>
-													</a>
-													<ul>
-														<?php
-														$statement2 = $pdo->prepare("SELECT * FROM tbl_end_category WHERE mcat_id=?");
-														$statement2->execute(array($row1['mcat_id']));
-														$result2 = $statement2->fetchAll(PDO::FETCH_ASSOC);
-														foreach ($result2 as $row2) {
-															?>
-															<li><a
-																	href="product-category.php?id=<?php echo $row2['ecat_id']; ?>&type=end-category">
-																	<?php echo $row2['ecat_name']; ?>
-																</a></li>
-															<?php
-														}
-														?>
-													</ul>
-												</li>
-												<?php
-											}
-											?>
-										</ul>
 									</li>
 									<?php
 								}
-								?>
-
-								<?php
-								$statement = $pdo->prepare("SELECT * FROM tbl_page WHERE id=1");
-								$statement->execute();
-								$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-								foreach ($result as $row) {
-									$about_title = $row['about_title'];
-									$faq_title = $row['faq_title'];
-									$blog_title = $row['blog_title'];
-									$contact_title = $row['contact_title'];
-									$pgallery_title = $row['pgallery_title'];
-									$vgallery_title = $row['vgallery_title'];
-								}
-								?>
+								?>								
 
 								<li><a href="about.php">
-										<?php echo $about_title; ?>
+										About Us
 									</a></li>
-								<!-- <li><a href="faq.php">
-										<?php echo $faq_title; ?>
-									</a></li> -->
 
-								<li><a href="contact.php">
-										<?php echo $contact_title; ?>
-									</a></li>
+								
 							</ul>
 						</div>
 					</div>
