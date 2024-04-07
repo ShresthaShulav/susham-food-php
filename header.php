@@ -296,30 +296,32 @@ foreach ($result as $row) {
 						?>
 
 						<li><a href="cart.php"><i class="fa fa-shopping-cart tw-text-white"></i>
-								<?php echo LANG_VALUE_18; ?> (
-								<?php echo LANG_VALUE_1; ?>
-								<?php
-								if (isset($_SESSION['cart_p_id'])) {
-									$table_total_price = 0;
-									$i = 0;
-									foreach ($_SESSION['cart_p_qty'] as $key => $value) {
-										$i++;
-										$arr_cart_p_qty[$i] = $value;
+								<span class="tw-text-white">
+									<?php echo LANG_VALUE_18; ?> (
+									<?php echo LANG_VALUE_1; ?>
+									<?php
+									if (isset($_SESSION['cart_p_id'])) {
+										$table_total_price = 0;
+										$i = 0;
+										foreach ($_SESSION['cart_p_qty'] as $key => $value) {
+											$i++;
+											$arr_cart_p_qty[$i] = $value;
+										}
+										$i = 0;
+										foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
+											$i++;
+											$arr_cart_p_current_price[$i] = $value;
+										}
+										for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
+											$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
+											$table_total_price = $table_total_price + $row_total_price;
+										}
+										echo $table_total_price;
+									} else {
+										echo '0.00';
 									}
-									$i = 0;
-									foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
-										$i++;
-										$arr_cart_p_current_price[$i] = $value;
-									}
-									for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
-										$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
-										$table_total_price = $table_total_price + $row_total_price;
-									}
-									echo $table_total_price;
-								} else {
-									echo '0.00';
-								}
-								?>)
+									?>)
+								</span>
 							</a></li>
 					</ul>
 				</div>
