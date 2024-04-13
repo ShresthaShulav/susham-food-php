@@ -213,18 +213,14 @@ This link will be active only for 24 hours.
               </div>
               <div
                 class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-text-9xl tw-font-spectral">
-                <div
+                <a href="dashboard.php" style="z-index:5"
                   class="tw-relative tw-tracking-[-0.02em] tw-leading-[34px] tw-font-extrabold tw-mq450:text-3xl tw-mq450:leading-[27px]">
                   My Account
-                </div>
-                <div
+                </a>
+                <a href="customer-order.php" style="z-index:5"
                   class="tw-relative tw-tracking-[-0.02em] tw-leading-[34px] tw-font-extrabold tw-mq450:text-3xl tw-mq450:leading-[27px]">
                   Track Your Order
-                </div>
-                <div
-                  class=" tw-relative tw-tracking-[-0.02em] tw-leading-[34px] tw-font-extrabold tw-inline-block tw-min-w-[70px] tw-mq450:text-3xl tw-mq450:leading-[27px]">
-                  FAQs
-                </div>
+                </a>
               </div>
             </div>
             <div
@@ -271,18 +267,7 @@ This link will be active only for 24 hours.
                 </div>
               </div>
             </div>
-            <div
-              class="tw-flex-1 tw-flex tw-flex-col tw-items-start tw-justify-start tw-pt-[46px] tw-px-0 tw-pb-0 tw-box-border tw-min-w-[200px] tw-text-sm">
-              <div class="tw-flex tw-flex-row tw-items-start tw-justify-start tw-py-0 tw-px-0 tw-relative">
-                <img
-                  class="tw-h-[168.6px] tw-w-[254.6px] tw-absolute tw-!m-[0] tw-top-[calc(50%_-_84px)] tw-left-[calc(50%_-_127px)]"
-                  alt="" src="public/shape-26.svg" />
-
-                <div class="tw-relative tw-leading-[20px] tw-font-semibold tw-inline-block tw-min-w-[106px] tw-z-[1]">
-                  Fill out the brief
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
