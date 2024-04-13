@@ -350,7 +350,7 @@ foreach ($result as $row) {
 						<div class="menu">
 							<ul class="tw-display-flex">
 								<li><a href="index.php">Home</a></li>
-								
+
 								<?php
 								$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE show_on_menu=1");
 								$statement->execute();
@@ -363,14 +363,11 @@ foreach ($result as $row) {
 									</li>
 									<?php
 								}
-								?>								
+								?>
 
 								<li><a href="about.php">
 										About Us
 									</a></li>
-
-								
-							</ul>
 						</div>
 					</div>
 				</div>
