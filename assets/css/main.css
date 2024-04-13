@@ -1204,8 +1204,8 @@ ul.nav-tabs {
 .page {
   width: 100%;
   height: auto;
-  /* padding-top: 50px; */
-  /* padding-bottom: 50px; */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .page h3.special {
