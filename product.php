@@ -352,7 +352,7 @@ if ($success_message1 != '') {
                             </div>
 
                             <form action="" method="post">
-                                <div class="p-quantity">
+                                <!-- <div class="p-quantity">
                                     <div class="row">
                                         <?php if (isset($size)): ?>
                                             <div class="col-md-12 mb_20">
@@ -400,7 +400,7 @@ if ($success_message1 != '') {
 
                                     </div>
 
-                                </div>
+                                </div> -->
                                 <div class="p-price">
                                     <span style="font-size:14px;">
                                         <?php echo LANG_VALUE_54; ?>
@@ -430,10 +430,22 @@ if ($success_message1 != '') {
                                         value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
                                 </div>
 
+                                <!-- <div class="tw-w-10">
+                                    <div class="tw-mx-auto tw-flex tw-h-8 tw-items-stretch tw-text-gray-600">
+                                        <button
+                                            class="tw-flex tw-items-center tw-justify-center tw-rounded-l-md tw-bg-whitesmoke-200 tw-px-4 tw-transition tw-hover:bg-black tw-hover:text-white">-</button>
+                                        <div
+                                            class="tw-flex tw-w-full tw-items-center tw-justify-center tw-bg-whitesmoke-200 tw-px-4 tw-text-xs tw-uppercase tw-transition">
+                                            1</div>
+                                        <button
+                                            class="tw-flex tw-items-center tw-justify-center tw-rounded-r-md tw-bg-whitesmoke-200 tw-px-4 tw-transition tw-hover:bg-black tw-hover:text-white">+</button>
+                                    </div>
+                                </div> -->
+
+
 
                                 <button type="submit" name="form_add_to_cart"
                                     class="tw-cursor-pointer tw-rounded-md tw-border-none tw-py-4 tw-px-10 tw-bg-darkslategray-300 tw-flex tw-flex-row tw-items-start tw-justify-start tw-gap-[16px]">
-
                                     <div
                                         class="tw-relative tw-text-base tw-tracking-[0.1px] tw-leading-[20px] tw-font-semibold tw-font-roboto tw-text-palegoldenrod tw-text-left tw-inline-block tw-min-w-[83px]">
                                         <?php echo LANG_VALUE_154; ?>
