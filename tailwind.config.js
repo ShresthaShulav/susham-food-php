@@ -78,6 +78,7 @@ module.exports = {
         poppins: "Poppins",
         raleway: "Raleway",
         "open-sans": "'Open Sans'",
+        smudger: "Smudger LET",
       },
       borderRadius: {
         "3xs": "10px",
