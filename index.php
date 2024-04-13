@@ -31,7 +31,7 @@ foreach ($result as $row) {
 
 <!-- Hero Section -->
 <div
-    class="tw-self-stretch tw-flex tw-flex-row tw-items-start tw-justify-center tw-py-0 tw-px-5 tw-box-border tw-max-w-full">
+    class="tw-self-stretch tw-bg-gainsboro-300 tw-flex tw-flex-row tw-items-start tw-justify-center tw-py-10 tw-px-5 tw-box-border tw-max-w-full">
     <div
         class="tw-w-[730px] tw-rounded-xl tw-bg-whitesmoke-200 tw-[backdrop-filter:blur(24px)] tw-flex tw-flex-col tw-items-center tw-justify-start tw-pt-[30px] tw-px-5 tw-pb-[59px] tw-box-border tw-gap-[62px] tw-max-w-full tw-mq450:gap-[15px_62px] tw-mq800:gap-[31px_62px]">
         <div
@@ -64,7 +64,7 @@ foreach ($result as $row) {
                 class="tw-cursor-pointer tw-py-2 tw-px-[43px] tw-bg-gainsboro-300 tw-rounded tw-flex tw-flex-row tw-items-start tw-justify-start tw-whitespace-nowrap tw-z-[1] tw-border-[0.5px] tw-border-solid tw-border-darkslategray-300 tw-hover:bg-silver-100 tw-hover:box-border tw-hover:border-[0.5px] tw-hover:border-solid tw-hover:border-teal-200 tw-mq450:pl-5 tw-mq450:pr-5 tw-mq450:box-border">
                 <div
                     class="tw-w-[170px] tw-relative tw-text-[20.6px] tw-font-medium tw-font-body-medium tw-text-darkslategray-300 tw-text-center tw-inline-block">
-                    View our Products
+                    <a href="product-category.php?id=6&type=top-category">View our Products</a>
                 </div>
             </button>
         </div>
@@ -228,6 +228,7 @@ foreach ($result as $row) {
     </div>
 <?php endif; ?>
 <!-- Top Sales -->
+
 
 <!-- Get Our Products From -->
 <section
