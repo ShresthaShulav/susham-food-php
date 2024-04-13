@@ -148,7 +148,7 @@ if (isset($_POST['form1'])) {
                                         $token,
                                         $cust_datetime,
                                         $cust_timestamp,
-                                        0
+                                        1
                                     ));
 
         // Send email for confirmation of the account
@@ -168,16 +168,16 @@ if (isset($_POST['form1'])) {
                    "Content-Type: text/html; charset=ISO-8859-1\r\n";
         
         // Sending Email
-        mail($to, $subject, $message, $headers);
+        // mail($to, $subject, $message, $headers);
 
-        unset($_POST['cust_name']);
-        unset($_POST['cust_cname']);
-        unset($_POST['cust_email']);
-        unset($_POST['cust_phone']);
-        unset($_POST['cust_address']);
-        unset($_POST['cust_city']);
-        unset($_POST['cust_state']);
-        unset($_POST['cust_zip']);
+        // unset($_POST['cust_name']);
+        // unset($_POST['cust_cname']);
+        // unset($_POST['cust_email']);
+        // unset($_POST['cust_phone']);
+        // unset($_POST['cust_address']);
+        // unset($_POST['cust_city']);
+        // unset($_POST['cust_state']);
+        // unset($_POST['cust_zip']);
 
         $success_message = LANG_VALUE_152;
     }
@@ -236,7 +236,7 @@ if (isset($_POST['form1'])) {
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_106; ?> *</label>
                                     <select name="cust_country" class="form-control select2">
-                                        <option value="">Select country</option>
+                                        <option value="">Select countries</option>
                                     <?php
                                     $statement = $pdo->prepare("SELECT * FROM tbl_country ORDER BY country_name ASC");
                                     $statement->execute();
@@ -250,6 +250,7 @@ if (isset($_POST['form1'])) {
                                     </select>                                    
                                 </div>
                                 
+
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_107; ?> *</label>
                                     <input type="text" class="form-control" name="cust_city" value="<?php if(isset($_POST['cust_city'])){echo $_POST['cust_city'];} ?>">
