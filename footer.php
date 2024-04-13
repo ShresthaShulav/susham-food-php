@@ -222,7 +222,7 @@ This link will be active only for 24 hours.
                   Track Your Order
                 </div>
                 <div
-                  class="tw-relative tw-tracking-[-0.02em] tw-leading-[34px] tw-font-extrabold tw-inline-block tw-min-w-[70px] tw-mq450:text-3xl tw-mq450:leading-[27px]">
+                  class=" tw-relative tw-tracking-[-0.02em] tw-leading-[34px] tw-font-extrabold tw-inline-block tw-min-w-[70px] tw-mq450:text-3xl tw-mq450:leading-[27px]">
                   FAQs
                 </div>
               </div>
@@ -235,7 +235,7 @@ This link will be active only for 24 hours.
               </a>
               <div
                 class="tw-relative tw-tracking-[-0.02em] tw-leading-[34px] tw-font-extrabold tw-inline-block tw-min-w-[126px] tw-mq450:text-3xl tw-mq450:leading-[27px]">
-                View Cart
+                <a href="cart.php"> View Cart </a>
               </div>
             </div>
           </div>
