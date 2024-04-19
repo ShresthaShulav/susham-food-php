@@ -320,31 +320,16 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         <label for=""><?php echo LANG_VALUE_34; ?> *</label>
                                         <select name="payment_method" class="form-control select2" id="advFieldsStatus">
                                             <option value=""><?php echo LANG_VALUE_35; ?></option>
-                                            <!-- <option value="PayPal"><?php echo LANG_VALUE_36; ?></option> -->
-                                            <option value="Bank Deposit">Cash On Deliveery</option>
+                                            <option value="Bank Deposit">Bank Deposit</option>
                                         </select>
                                     </div>
 
-                                    <form class="paypal" action="<?php echo BASE_URL; ?>payment/paypal/payment_process.php"
-                                        method="post" id="paypal_form" target="_blank">
-                                        <input type="hidden" name="cmd" value="_xclick" />
-                                        <input type="hidden" name="no_note" value="1" />
-                                        <input type="hidden" name="lc" value="UK" />
-                                        <input type="hidden" name="currency_code" value="USD" />
-                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest" />
-
-                                        <input type="hidden" name="final_total" value="<?php echo $final_total; ?>">
-                                        <div class="col-md-12 form-group">
-                                            <input type="submit" class="btn btn-primary" value="<?php echo LANG_VALUE_46; ?>"
-                                                name="form1">
-                                        </div>
-                                    </form>
 
 
 
                                     <form action="payment/bank/init.php" method="post" id="bank_form">
                                         <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
-                                        <div class="col-md-12 form-group tw-hidden">
+                                        <div class="col-md-12 form-group   ">
                                             <label for=""><?php echo LANG_VALUE_43; ?></span></label><br>
                                             <?php
                                             $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
@@ -355,11 +340,11 @@ if (!isset($_SESSION['cart_p_id'])) {
                                             }
                                             ?>
                                         </div>
-                                        <div class="col-md-12 form-group tw-hidden  ">
+                                        <div class="col-md-12 form-group ">
                                             <label for=""><?php echo LANG_VALUE_44; ?> <br><span
                                                     style="font-size:12px;font-weight:normal;">(<?php echo LANG_VALUE_45; ?>)</span></label>
                                             <textarea name="transaction_info" class="form-control" cols="30"
-                                                rows="10">Your default value goes here</textarea>
+                                                rows="10"></textarea>
                                         </div>
                                         <div class="col-md-12 form-group">
                                             <button type="submit" name="form3"
@@ -372,6 +357,8 @@ if (!isset($_SESSION['cart_p_id'])) {
                                             </button>
                                         </div>
                                     </form>
+
+
 
                                 </div>
 
