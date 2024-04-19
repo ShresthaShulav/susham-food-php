@@ -130,7 +130,7 @@ foreach ($result as $row) {
                                             <?php echo $row['p_name']; ?>
                                         </a></h3>
                                     <h4>
-                                        $
+                                        NPR
                                         <?php echo $row['p_current_price']; ?>
                                         <?php if ($row['p_old_price'] != ''): ?>
                                             <del>
