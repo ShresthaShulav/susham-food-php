@@ -269,7 +269,7 @@ foreach ($result as $row) {
                 <div
                     class="tw-w-[243px] tw-flex tw-flex-row tw-items-start tw-justify-start tw-relative tw-text-base tw-text-gray1-200 tw-font-body-medium">
                     <div class="tw-flex-1 tw-relative tw-leading-[150%] tw-font-medium tw-z-[2]">“ Highly recommend this
-                        website for quality flowers and plants. Great prices, timely delivery and excellent customer
+                        website for quality food. Great prices, timely delivery and excellent customer
                         service. ”</div>
                     <div class="tw-h-[289px] tw-w-[316px] tw-absolute tw-!m-[0] tw-right-[-73px] tw-bottom-[-98px]"><img
                             class="tw-absolute tw-top-[61px] tw-left-[58px] tw-w-[258px] tw-h-[228px] tw-overflow-hidden tw-z-[1]"
@@ -293,7 +293,7 @@ foreach ($result as $row) {
                 <div
                     class="tw-w-[243px] tw-flex tw-flex-row tw-items-start tw-justify-start tw-relative tw-text-base tw-text-gray1-200 tw-font-body-medium">
                     <div class="tw-flex-1 tw-relative tw-leading-[150%] tw-font-medium tw-z-[1]">"Great service,
-                        beautiful flowers, timely delivery. Highly recommend."</div><img
+                        beautiful packaging, timely delivery. Highly recommend."</div><img
                         class="tw-h-[197px] tw-w-44 tw-absolute tw-!m-[0] tw-right-[-73px] tw-bottom-[-115px] tw-overflow-hidden tw-shrink-0 tw-z-[2]"
                         loading="lazy" alt="" src="public/snake-plant-1.svg" />
                 </div>
@@ -304,7 +304,7 @@ foreach ($result as $row) {
                 </div>
                 <div
                     class="tw-absolute tw-top-[142px] tw-left-[54px] tw-leading-[150%] tw-font-medium tw-inline-block tw-w-[243px] tw-z-[1]">
-                    "I am very happy with my purchase from this website, the plants were healthy and arrived on time.”
+                    "I am very happy with my purchase from this website, the foods were healthy and arrived on time.”
                 </div>
                 <img class="tw-absolute tw-top-[155px] tw-left-[162px] tw-w-[198px] tw-h-[174px] tw-overflow-hidden tw-z-[2]"
                     loading="lazy" alt="" src="public/bamboo-258.svg" />
