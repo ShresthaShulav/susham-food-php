@@ -302,25 +302,6 @@ if (isset($_POST['form1'])) {
         $error_message .= LANG_VALUE_125 . "<br>";
     }
 
-    if (empty($_POST['cust_country'])) {
-        $valid = 0;
-        $error_message .= LANG_VALUE_126 . "<br>";
-    }
-
-    if (empty($_POST['cust_city'])) {
-        $valid = 0;
-        $error_message .= LANG_VALUE_127 . "<br>";
-    }
-
-    if (empty($_POST['cust_state'])) {
-        $valid = 0;
-        $error_message .= LANG_VALUE_128 . "<br>";
-    }
-
-    if (empty($_POST['cust_zip'])) {
-        $valid = 0;
-        $error_message .= LANG_VALUE_129 . "<br>";
-    }
 
     if (empty($_POST['cust_password']) || empty($_POST['cust_re_password'])) {
         $valid = 0;
@@ -376,14 +357,14 @@ if (isset($_POST['form1'])) {
         $statement->execute(
             array(
                 strip_tags($_POST['cust_name']),
-                strip_tags($_POST['cust_cname']),
+                '',
                 strip_tags($_POST['cust_email']),
                 strip_tags($_POST['cust_phone']),
-                strip_tags($_POST['cust_country']),
+                154,
                 strip_tags($_POST['cust_address']),
-                strip_tags($_POST['cust_city']),
-                strip_tags($_POST['cust_state']),
-                strip_tags($_POST['cust_zip']),
+                '',
+                '',
+                '',
                 '',
                 '',
                 '',
@@ -476,26 +457,10 @@ if (isset($_POST['form1'])) {
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
                                 Name
                             </div>
-                            <input type="text" class="form-control" name="cust_name"
-                                value="<?php if (isset($_POST['cust_name'])) {
-                                    echo $_POST['cust_name'];
-                                } ?>">
+                            <input type="text" class="form-control" name="cust_name" value="<?php if (isset($_POST['cust_name'])) {
+                                echo $_POST['cust_name'];
+                            } ?>">
                         </div>
-                    </div>
-                </div>
-                <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                    <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <div
-                            class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <!-- <div
-                                class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
-                                Company Name
-                            </div> -->
-                            <!-- <input type="text" class="form-control" name="cust_cname"
-                                        value="<?php if (isset($_POST['cust_cname'])) {
-                                            echo $_POST['cust_cname'];
-                                        } ?>
-                        </div> -->
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
@@ -506,10 +471,10 @@ if (isset($_POST['form1'])) {
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
                                 Email
                             </div>
-                            <input type="email" class="form-control" name="cust_email"
-                                        value="<?php if (isset($_POST['cust_email'])) {
-                                            echo $_POST['cust_email'];
-                                        } ?>">                        </div>
+                            <input type="email" class="form-control" name="cust_email" value="<?php if (isset($_POST['cust_email'])) {
+                                echo $_POST['cust_email'];
+                            } ?>">
+                        </div>
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
@@ -520,10 +485,10 @@ if (isset($_POST['form1'])) {
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
                                 Phone Number
                             </div>
-                            <input type="text" class="form-control" name="cust_phone"
-                                        value="<?php if (isset($_POST['cust_phone'])) {
-                                            echo $_POST['cust_phone'];
-                                        } ?>">                        </div>
+                            <input type="text" class="form-control" name="cust_phone" value="<?php if (isset($_POST['cust_phone'])) {
+                                echo $_POST['cust_phone'];
+                            } ?>">
+                        </div>
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
@@ -534,79 +499,13 @@ if (isset($_POST['form1'])) {
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
                                 Address
                             </div>
-                            <textarea name="cust_address" class="form-control" cols="30" rows="10"
-                                        style="height:70px;"><?php if (isset($_POST['cust_address'])) {
-                                            echo $_POST['cust_address'];
-                                        } ?></textarea>                        </div>
+                            <textarea name="cust_address" class="form-control" cols="30" rows="10" style="height:70px;"><?php if (isset($_POST['cust_address'])) {
+                                echo $_POST['cust_address'];
+                            } ?></textarea>
+                        </div>
                     </div>
                 </div>
-                <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                    <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <!-- <div
-                            class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <div
-                                class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
-                                Country
-                            </div>
-                            <select name="cust_country" class="form-control select2">
-                                        <option value="">Select Country</option>
-                                        <?php
-                                        $statement = $pdo->prepare("SELECT * FROM tbl_country ORDER BY country_name ASC");
-                                        $statement->execute();
-                                        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-                                        foreach ($result as $row) {
-                                            ?>
-                                            <option value="<?php echo $row['country_id']; ?>">
-                                                <?php echo $row['country_name']; ?></option>
-                                            <?php
-                                        }
-                                        ?>
-                                    </select>                        </div> -->
-                    </div>
-                </div>
-                <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                    <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <div
-                            class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <!-- <div
-                                class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
-                                City
-                            </div>
-                            <input type="text" class="form-control" name="cust_city"
-                                        value="<?php if (isset($_POST['cust_city'])) {
-                                            echo $_POST['cust_city'];
-                                        } ?>">                        </div> -->
-                    </div>
-                </div>
-                <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                    <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <!-- <div
-                            class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <div
-                                class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
-                                State
-                            </div>
-                            <input type="text" class="form-control" name="cust_state"
-                                        value="<?php if (isset($_POST['cust_state'])) {
-                                            echo $_POST['cust_state'];
-                                        } ?>">                        </div> -->
-                    </div>
-                </div>
-                <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                    <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <!-- <div
-                            class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <div
-                                class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[66px]">
-                                Zip Code
-                            </div>
-                            <input type="text" class="form-control" name="cust_zip"
-                                        value="<?php if (isset($_POST['cust_zip'])) {
-                                            echo $_POST['cust_zip'];
-                                        } ?>">
-                        </div> -->
-                    </div>
-                </div>
+
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                     <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                         <div
@@ -668,4 +567,4 @@ if (isset($_POST['form1'])) {
     function redirectToLogin() {
         alert("You have successfully registered. Please login to continue.");
     }
-</script>   
+</script>
