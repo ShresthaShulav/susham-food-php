@@ -2,7 +2,7 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View End Level Categories</h1>
+		<h1>Package of 370 GMS (Rs.250)</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="end-category-add.php" class="btn btn-primary btn-sm">Add New</a>
@@ -23,9 +23,9 @@
 			<thead>
 			    <tr>
 			        <th>#</th>
-			        <th>End Level Category Name</th>
-                    <th>Mid Level Category Name</th>
-                    <th>Top Level Category Name</th>
+			        <th>Large Package</th>
+                    <th>Made From</th>
+                    <th>Large Paackage Name</th>
 			        <th>Action</th>
 			    </tr>
 			</thead>

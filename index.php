@@ -241,7 +241,7 @@ foreach ($result as $row) {
                 Get Our Products From
             </h1>
         </div>
-        <img src="public/Listing_Screen.png" class="tw-mx-auto">
+        <img src="public/Store_Screen.png" class="tw-mx-auto">
     </div>
 </section>
 <!-- Get Our Products From -->

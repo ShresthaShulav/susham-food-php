@@ -2,7 +2,7 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Top Level Categories</h1>
+		<h1>Package of 70 GMS (Rs.50)</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="top-category-add.php" class="btn btn-primary btn-sm">Add New</a>
@@ -23,8 +23,8 @@
 			<thead>
 			    <tr>
 			        <th>#</th>
-			        <th>Top Category Name</th>
-                    <th>Show on Menu?</th>
+			        <th>Small Package</th>
+                    <th>Made From</th>
 			        <th>Action</th>
 			    </tr>
 			</thead>

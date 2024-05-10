@@ -2,7 +2,7 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Mid Level Categories</h1>
+		<h1>Package of 140 GMS (Rs.100)</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="mid-category-add.php" class="btn btn-primary btn-sm">Add New</a>
@@ -23,8 +23,8 @@
 			<thead>
 			    <tr>
 			        <th>#</th>
-			        <th>Mid Level Category Name</th>
-                    <th>Top Level Category Name</th>
+			        <th>Medium Packaage</th>
+                    <th>Made From</th>
 			        <th>Action</th>
 			    </tr>
 			</thead>

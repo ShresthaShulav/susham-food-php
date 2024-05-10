@@ -66,7 +66,7 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Top Category Name <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Small Package <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="tcat_name">
 							</div>

@@ -487,15 +487,15 @@ if (isset($_POST['form1'])) {
                     <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                         <div
                             class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <div
+                            <!-- <div
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
                                 Company Name
-                            </div>
-                            <input type="text" class="form-control" name="cust_cname"
+                            </div> -->
+                            <!-- <input type="text" class="form-control" name="cust_cname"
                                         value="<?php if (isset($_POST['cust_cname'])) {
                                             echo $_POST['cust_cname'];
-                                        } ?>">
-                        </div>
+                                        } ?>
+                        </div> -->
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
@@ -542,7 +542,7 @@ if (isset($_POST['form1'])) {
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                     <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <div
+                        <!-- <div
                             class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
                             <div
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
@@ -561,26 +561,26 @@ if (isset($_POST['form1'])) {
                                             <?php
                                         }
                                         ?>
-                                    </select>                        </div>
+                                    </select>                        </div> -->
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                     <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                         <div
                             class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
-                            <div
+                            <!-- <div
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
                                 City
                             </div>
                             <input type="text" class="form-control" name="cust_city"
                                         value="<?php if (isset($_POST['cust_city'])) {
                                             echo $_POST['cust_city'];
-                                        } ?>">                        </div>
+                                        } ?>">                        </div> -->
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                     <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <div
+                        <!-- <div
                             class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
                             <div
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[36px]">
@@ -589,12 +589,12 @@ if (isset($_POST['form1'])) {
                             <input type="text" class="form-control" name="cust_state"
                                         value="<?php if (isset($_POST['cust_state'])) {
                                             echo $_POST['cust_state'];
-                                        } ?>">                        </div>
+                                        } ?>">                        </div> -->
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
                     <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">
-                        <div
+                        <!-- <div
                             class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-gap-[6px] tw-max-w-full">
                             <div
                                 class="tw-relative tw-text-sm tw-leading-[20px] tw-font-medium tw-font-body-2-medium tw-text-white tw-text-left tw-inline-block tw-min-w-[66px]">
@@ -604,7 +604,7 @@ if (isset($_POST['form1'])) {
                                         value="<?php if (isset($_POST['cust_zip'])) {
                                             echo $_POST['cust_zip'];
                                         } ?>">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="tw-self-stretch tw-flex tw-flex-col tw-items-start tw-justify-start tw-max-w-full">

@@ -6,17 +6,17 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
+        $error_message .= "You must have to select a Small Package<br>";
     }
 
     if(empty($_POST['mcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a mid level category<br>";
+        $error_message .= "You must have to select a Medium Package<br>";
     }
 
     if(empty($_POST['ecat_name'])) {
         $valid = 0;
-        $error_message .= "End level category name can not be empty<br>";
+        $error_message .= "Large Package name can not be empty<br>";
     }
 
     if($valid == 1) {    	
@@ -24,7 +24,7 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("UPDATE tbl_end_category SET ecat_name=?,mcat_id=? WHERE ecat_id=?");
 		$statement->execute(array($_POST['ecat_name'],$_POST['mcat_id'],$_REQUEST['id']));
 
-    	$success_message = 'End Level Category is updated successfully.';
+    	$success_message = 'Large is updated successfully.';
     }
 }
 ?>
@@ -133,7 +133,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">End Level Category Name <span>*</span></label>
+                    <label for="" class="col-sm-3 control-label">Large Package Name <span>*</span></label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="ecat_name" value="<?php echo $ecat_name; ?>">
                     </div>

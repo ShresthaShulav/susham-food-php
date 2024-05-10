@@ -16,7 +16,7 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['ecat_name'])) {
         $valid = 0;
-        $error_message .= "End level category name can not be empty<br>";
+        $error_message .= "ory name can not be empty<br>";
     }
 
     if($valid == 1) {
@@ -25,14 +25,14 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("INSERT INTO tbl_end_category (ecat_name,mcat_id) VALUES (?,?)");
 		$statement->execute(array($_POST['ecat_name'],$_POST['mcat_id']));
 	
-    	$success_message = 'End Level Category is added successfully.';
+    	$success_message = 'ory is added successfully.';
     }
 }
 ?>
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Add End Level Category</h1>
+		<h1>Add ory</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="end-category.php" class="btn btn-primary btn-sm">View All</a>
@@ -92,7 +92,7 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">End Level Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">ory Name <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="ecat_name">
 							</div>
