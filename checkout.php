@@ -321,13 +321,30 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         <select name="payment_method" class="form-control select2" id="advFieldsStatus">
                                             <option value=""><?php echo LANG_VALUE_35; ?></option>
                                             <option value="Bank Deposit">Bank Deposit</option>
+                                            <option value="PayPal">Stripe</option>
                                             <option value="Khalti">Khalti</option>
 
                                         </select>
                                     </div>
 
+                                    <form class="paypal" action="<?php echo BASE_URL; ?>payment/paypal/payment_process.php"
+                                        method="post" id="paypal_form" target="_blank">
+                                        <input type="hidden" name="cmd" value="_xclick" />
+                                        <input type="hidden" name="no_note" value="1" />
+                                        <input type="hidden" name="lc" value="UK" />
+                                        <input type="hidden" name="currency_code" value="USD" />
+                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest" />
 
-
+                                        <input type="hidden" name="final_total" value="<?php echo $final_total; ?>">
+                                        <div class="col-md-12 form-group ">
+                                            <div
+                                                class="tw-cursor-pointer tw-rounded-md tw-border-none tw-py-4 tw-px-10 tw-bg-darkslategray-300 tw-flex tw-flex-row tw-items-start tw-justify-start tw-gap-[16px]">
+                                                <input type="submit"
+                                                    class="tw-max-w-1/2 tw-relative tw-text-base tw-tracking-[0.1px] tw-leading-[20px] tw-font-semibold tw-font-roboto tw-text-palegoldenrod tw-text-left tw-inline-block tw-min-w-[83px]"
+                                                    value="Proceed to Checkout" name="form1">
+                                            </div>
+                                        </div>
+                                    </form>
 
                                     <form action="payment/bank/init.php" method="post" id="bank_form">
                                         <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
