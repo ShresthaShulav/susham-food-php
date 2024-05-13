@@ -267,7 +267,7 @@ This link will be active only for 24 hours.
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -330,6 +330,7 @@ foreach ($result as $row) {
     $('#paypal_form').hide();
     $('#stripe_form').hide();
     $('#bank_form').hide();
+    $('#khalti_form').hide();
 
     $('#advFieldsStatus').on('change', function () {
       advFieldsStatus = $('#advFieldsStatus').val();
@@ -337,18 +338,27 @@ foreach ($result as $row) {
         $('#paypal_form').hide();
         $('#stripe_form').hide();
         $('#bank_form').hide();
+        $('#khalti_form').hide();
       } else if (advFieldsStatus == 'PayPal') {
         $('#paypal_form').show();
         $('#stripe_form').hide();
         $('#bank_form').hide();
+        $('#khalti_form').hide();
       } else if (advFieldsStatus == 'Stripe') {
         $('#paypal_form').hide();
         $('#stripe_form').show();
         $('#bank_form').hide();
+        $('#khalti_form').hide();
       } else if (advFieldsStatus == 'Bank Deposit') {
         $('#paypal_form').hide();
         $('#stripe_form').hide();
         $('#bank_form').show();
+        $('#khalti_form').hide();
+      } else if (advFieldsStatus == 'Khalti') {
+        $('#paypal_form').hide();
+        $('#stripe_form').hide();
+        $('#bank_form').hide();
+        $('#khalti_form').show();
       }
     });
   });

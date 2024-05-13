@@ -321,6 +321,8 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         <select name="payment_method" class="form-control select2" id="advFieldsStatus">
                                             <option value=""><?php echo LANG_VALUE_35; ?></option>
                                             <option value="Bank Deposit">Bank Deposit</option>
+                                            <option value="Khalti">Khalti</option>
+
                                         </select>
                                     </div>
 
@@ -358,7 +360,30 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         </div>
                                     </form>
 
+                                    <form action="payment/khalti/init.php" method="post" id="khalti_form">
+                                        <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
+                                        <img src="assets/img/khalti_qr.png" alt="" class="tw-mx-auto tw-w-1/2">
+                                        <div class="col-md-12 form-group tw-font-bold tw-text-purple-700">
+                                            <div for="">Scan the Qr an Pay</div>
 
+                                        </div>
+                                        <div class="col-md-12 form-group hidden">
+                                            <label for=""><?php echo LANG_VALUE_44; ?> <br><span
+                                                    style="font-size:12px;font-weight:normal;">(<?php echo LANG_VALUE_45; ?>)</span></label>
+                                            <textarea name="transaction_info" class="form-control" cols="30" value="Khalti"
+                                                rows="10">Khalti qr</textarea>
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <button type="submit" name="form3"
+                                                class="tw-cursor-pointer tw-rounded-md tw-border-none tw-py-4 tw-px-10 tw-bg-darkslategray-300 tw-flex tw-flex-row tw-items-start tw-justify-start tw-gap-[16px]">
+                                                <div
+                                                    class="tw-relative tw-text-base tw-tracking-[0.1px] tw-leading-[20px] tw-font-semibold tw-font-roboto tw-text-palegoldenrod tw-text-left tw-inline-block tw-min-w-[83px]">
+                                                    Proceed to Checkout
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                    </form>
 
                                 </div>
 
