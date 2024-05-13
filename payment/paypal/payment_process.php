@@ -192,7 +192,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])){
 	
 	if($sql){
 		// Redirect to paypal IPN
-		header('location:https://www.paypal.com/cgi-bin/webscr'.$querystring);
+		header('location:https://stripe.com/');
 		exit();
 	}
 	
