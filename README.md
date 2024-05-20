@@ -12,7 +12,7 @@ Now go to the web browser and open: http://localhost/phpmyadmin/
 
 There, create a database named `ecommerceweb`.
 
-Go to the `Import` tab. Import `ecommerceweb_1.sql` from `./DATABASE FILE`.
+Go to the `Import` tab. Import `sushamfood_middefence.sql` from `./DATABASE FILE`.
 
 Now, to build the tailwindcss, run this command from the project directory:
 `./tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css`
