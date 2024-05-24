@@ -786,6 +786,10 @@ video {
   min-height: 329px;
 }
 
+.tw-w-1\/2 {
+  width: 50%;
+}
+
 .tw-w-1\/5 {
   width: 20%;
 }
@@ -1889,6 +1893,11 @@ video {
 .tw-text-palegoldenrod {
   --tw-text-opacity: 1;
   color: rgb(235 225 172 / var(--tw-text-opacity));
+}
+
+.tw-text-purple-700 {
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
 }
 
 .tw-text-red-50 {

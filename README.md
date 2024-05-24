@@ -10,7 +10,7 @@ Then, open the Xampp control panel and start Apache and MySQL.
 
 Now go to the web browser and open: http://localhost/phpmyadmin/
 
-There, create a database named `ecommerceweb`.
+There, create a database named `sushamfoodmiddefense`.
 
 Go to the `Import` tab. Import `sushamfood_middefence.sql` from `./DATABASE FILE`.
 
