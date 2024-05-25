@@ -10,8 +10,8 @@ foreach ($result as $row) {
     $about_banner = $row['about_banner'];
 }
 ?>
-<!-- 
-<div class="page-banner" style="background-image: url(assets/uploads/<?php echo $about_banner; ?>);">
+
+<!-- <div class="page-banner" style="background-image: url(assets/uploads/<?php echo $about_banner; ?>);">
     <div class="inner">
         <h1><?php echo $about_title; ?></h1>
     </div>
@@ -22,12 +22,12 @@ foreach ($result as $row) {
         <div class="row">            
             <div class="col-md-12">      
                 <p>
-                    <?php echo $about_content; ?>
+                <?php echo $about_content; ?>
                 </p>
             </div>
         </div>
     </div>
-</div> -->
+</div>  -->
 <div
     class="tw-w-full  tw-relative tw-bg-gainsboro-300 tw-overflow-hidden tw-flex tw-flex-col tw-items-end tw-justify-start tw-gap-[148px] tw-tracking-[normal] tw-mq450:gap-[37px_148px] tw-mq750:gap-[74px_148px]">
     <section
