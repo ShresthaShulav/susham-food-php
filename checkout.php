@@ -174,10 +174,10 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         <td><?php echo $_SESSION['customer']['cust_b_name']; ?></p>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td><?php echo LANG_VALUE_103; ?></td>
                                         <td><?php echo $_SESSION['customer']['cust_b_cname']; ?></td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                         <td><?php echo LANG_VALUE_104; ?></td>
                                         <td><?php echo $_SESSION['customer']['cust_b_phone']; ?></td>
@@ -223,10 +223,10 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         <td><?php echo $_SESSION['customer']['cust_s_name']; ?></p>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td><?php echo LANG_VALUE_103; ?></td>
                                         <td><?php echo $_SESSION['customer']['cust_s_cname']; ?></td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                         <td><?php echo LANG_VALUE_104; ?></td>
                                         <td><?php echo $_SESSION['customer']['cust_s_phone']; ?></td>
@@ -320,36 +320,64 @@ if (!isset($_SESSION['cart_p_id'])) {
                                         <label for=""><?php echo LANG_VALUE_34; ?> *</label>
                                         <select name="payment_method" class="form-control select2" id="advFieldsStatus">
                                             <option value=""><?php echo LANG_VALUE_35; ?></option>
-                                            <option value="Bank Deposit">Bank Deposit</option>
-                                            <option value="PayPal">Stripe</option>
+                                            <option value="Bank Deposit">Cash on Delivery</option>
+                                            <option value="Stripe">Stripe</option>
                                             <option value="Khalti">Khalti</option>
 
                                         </select>
                                     </div>
 
-                                    <form class="paypal" action="<?php echo BASE_URL; ?>payment/paypal/payment_process.php"
-                                        method="post" id="paypal_form">
-                                        <input type="hidden" name="cmd" value="_xclick" />
-                                        <input type="hidden" name="no_note" value="1" />
-                                        <input type="hidden" name="lc" value="UK" />
-                                        <input type="hidden" name="currency_code" value="USD" />
-                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest" />
+                                    <form action="payment/stripe/init.php" method="post" id="stripe_form">
+                                        <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
+                                        <section
+                                            class="tw-max-w-4xl tw-p-6 tw-mx-auto tw-bg-white tw-rounded-md tw-dark:bg-gray-800">
+                                            <img src="assets/img/stripe_image.png" alt="" class="tw-mx-auto tw-w-1/2">
 
-                                        <input type="hidden" name="final_total" value="<?php echo $final_total; ?>">
-                                        <div class="col-md-12 form-group ">
-                                            <div
-                                                class="tw-cursor-pointer tw-rounded-md tw-border-none tw-py-4 tw-px-10 tw-bg-darkslategray-300 tw-flex tw-flex-row tw-items-start tw-justify-start tw-gap-[16px]">
-                                                <input type="submit"
-                                                    class="tw-max-w-1/2 tw-relative tw-text-base tw-tracking-[0.1px] tw-leading-[20px] tw-font-semibold tw-font-roboto tw-text-palegoldenrod tw-text-left tw-inline-block tw-min-w-[83px]"
-                                                    value="Proceed to Checkout" name="form1">
+                                            <h2
+                                                class="tw-text-lg tw-font-semibold tw-text-gray-700 tw-capitalize tw-dark:text-white">
+                                                Your Stripe Account</h2>
+
+                                            <div class="tw-grid tw-grid-cols-1 tw-gap-6 tw-mt-4 sm:tw-grid-cols-2">
+                                                <div>
+                                                    <label class="tw-text-gray-700 tw-dark:text-gray-200">Username</label>
+                                                    <input id="" type="text" required
+                                                        class="tw-block tw-w-full tw-px-4 tw-py-2 tw-mt-2 tw-text-gray-700 tw-bg-white tw-rounded-md tw-dark:bg-gray-800 tw-dark:text-gray-300 tw-focus:border-blue-400 tw-focus:ring-blue-300 tw-focus:ring-opacity-40 tw-dark:focus:border-blue-300 tw-focus:outline-none tw-focus:ring"
+                                                        style="border: 1px solid black;">
+                                                </div>
+                                                <div>
+                                                    <label class="tw-text-gray-700 tw-dark:text-gray-200">Password</label>
+                                                    <input id="" type="password" required
+                                                        class="tw-block tw-w-full tw-px-4 tw-py-2 tw-mt-2 tw-text-gray-700 tw-bg-white tw-rounded-md tw-dark:bg-gray-800 tw-dark:text-gray-300 tw-focus:border-blue-400 tw-focus:ring-blue-300 tw-focus:ring-opacity-40 tw-dark:focus:border-blue-300 tw-focus:outline-none tw-focus:ring"
+                                                        style="border: 1px solid black;">
+                                                </div>
                                             </div>
+
+
+                                        </section>
+
+
+                                        <div class="col-md-12 form-group hidden">
+                                            <label for=""><?php echo LANG_VALUE_44; ?> <br><span
+                                                    style="font-size:12px;font-weight:normal;">(<?php echo LANG_VALUE_45; ?>)</span></label>
+                                            <textarea name="transaction_info" class="form-control" cols="30" value="Khalti"
+                                                rows="10">Khalti qr</textarea>
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <button type="submit" name="form1"
+                                                class="tw-cursor-pointer tw-rounded-md tw-border-none tw-py-4 tw-px-10 tw-bg-darkslategray-300 tw-flex tw-flex-row tw-items-start tw-justify-start tw-gap-[16px]">
+                                                <div
+                                                    class="tw-relative tw-text-base tw-tracking-[0.1px] tw-leading-[20px] tw-font-semibold tw-font-roboto tw-text-palegoldenrod tw-text-left tw-inline-block tw-min-w-[83px]">
+                                                    Proceed to Checkout
+                                                </div>
+
+                                            </button>
                                         </div>
                                     </form>
 
                                     <form action="payment/bank/init.php" method="post" id="bank_form">
                                         <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
                                         <div class="col-md-12 form-group   ">
-                                            <label for=""><?php echo LANG_VALUE_43; ?></span></label><br>
+                                            <!-- <label for=""><?php echo LANG_VALUE_43; ?></span></label><br>
                                             <?php
                                             $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
                                             $statement->execute();
@@ -357,13 +385,12 @@ if (!isset($_SESSION['cart_p_id'])) {
                                             foreach ($result as $row) {
                                                 echo nl2br($row['bank_detail']);
                                             }
-                                            ?>
+                                            ?> -->
                                         </div>
                                         <div class="col-md-12 form-group ">
-                                            <label for=""><?php echo LANG_VALUE_44; ?> <br><span
-                                                    style="font-size:12px;font-weight:normal;">(<?php echo LANG_VALUE_45; ?>)</span></label>
+                                            <label for="">Any notes to delivery personell. <br></label>
                                             <textarea name="transaction_info" class="form-control" cols="30"
-                                                rows="10"></textarea>
+                                                rows="10">Add your Notes here</textarea>
                                         </div>
                                         <div class="col-md-12 form-group">
                                             <button type="submit" name="form3"

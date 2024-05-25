@@ -51,7 +51,7 @@ if (!isset($_REQUEST['msg'])) {
                 '',
                 '',
                 $_POST['transaction_info'],
-                'Khalti',
+                'Stripe Payment',
                 'Completed',
                 'Pending',
                 $payment_id
